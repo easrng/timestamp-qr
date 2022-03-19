@@ -1,6 +1,6 @@
 import Client, {HTTP} from "./drandClient.js";
 import routed from "./routing.js";
-import { info, encodeDrand } from "./drand.js";
+import { info, encodeDrand } from "./drand.js?1";
 const urls = ["https://api.drand.sh", "https://drand.cloudflare.com"];
 
 const client = Client.wrap(HTTP.forURLs(urls, info.hash), {
