@@ -38,6 +38,6 @@ async function update() {
     console.error(e);
   }
   generate(base + Date.now().toString(36) + ":" + currentDrand);
-  setTimeout(update, window.clockSpeed||5000);
+  setTimeout(update, 5000);
 }
 routed.then(update);
