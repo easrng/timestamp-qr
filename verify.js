@@ -11,7 +11,8 @@ async function main() {
   document.body.classList.remove("beforeload");
   document.body.classList.add("loading");
   if(typeof WebAssembly != "object"){
-    document.querySelector("#time").textContent =  "Please enable WebAssembly. Some browsers may require JIT to be enabled for WebAssembly to work."
+    document.body.textContent =  "Please enable WebAssembly. Some browsers may require JIT to be enabled for WebAssembly to work."
+    document.body.classList.remove("loading");
     return
   }
   let [timestamp, drandRound, drandHash] = location.hash.slice(1).split(":");
