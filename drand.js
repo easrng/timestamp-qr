@@ -21,7 +21,7 @@ export async function encodeDrand(res) {
     new Uint8Array(
       await crypto.subtle.digest("SHA-256", drandRandPlusSignature)
     )
-      .slice(0, 20)
+      .slice(0, window.hashBytes||20)
       .reduce((a, b) => BigInt(b) + (a << 8n), 0n)
       .toString(36)
   );
