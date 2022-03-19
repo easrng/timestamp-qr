@@ -1,6 +1,6 @@
 import { QrCode } from "./qr.js";
 import routed from "./routing.js";
-import { info, encodeDrand } from "./drand.js";
+import { info, encodeDrand } from "./drand.js?1";
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 const base = location.origin + location.pathname + "#";
